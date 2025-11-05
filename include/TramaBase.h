@@ -51,14 +51,19 @@ public:
      */
     void procesar(ListaDeCarga* carga, RotorDeMapeo* rotor) override {
         // Decodificar el carácter usando el rotor
-        char decodificado = rotor->getMapeo(caracter);
-        
-        // Agregar a la lista de carga
+        char decodificado = NULL;
+        if(carga) {decodificado = rotor->getMapeo(caracter);}
         carga->insertarAlFinal(decodificado);
         
         // Mensaje de depuración
+        if(caracter==' '){
+
+            std::cout << "Trama recibida: [L,Space" << "] -> Procesando... -> ";
+            std::cout << "Fragmento 'Space' decodificado como '" << decodificado << "'. ";
+        }else{
         std::cout << "Trama recibida: [L," << caracter << "] -> Procesando... -> ";
         std::cout << "Fragmento '" << caracter << "' decodificado como '" << decodificado << "'. ";
+        }
         std::cout << "Mensaje: ";
         carga->imprimirMensajeDetallado();
     }
@@ -108,5 +113,4 @@ public:
      */
     int getRotacion() const { return rotacion; }
 };
-
 #endif // TRAMABASE_H

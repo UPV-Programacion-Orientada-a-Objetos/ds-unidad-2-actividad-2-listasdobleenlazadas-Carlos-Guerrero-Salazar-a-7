@@ -31,6 +31,11 @@ TramaBase* parsearTrama(const char* linea) {
     
     if (tipo == 'L') {
         // Trama de carga: L,X donde X es un carácter
+        const char* dato = &linea[2];
+        if (std::strcmp(dato, "Space") == 0) {
+            std::cout << "[INFO] Trama especial L,Space recibida.\n";
+            return new TramaLoad(' '); // Crea una TramaLoad con el carácter espacio
+        }
         char caracter = linea[2];
         return new TramaLoad(caracter);
     } 

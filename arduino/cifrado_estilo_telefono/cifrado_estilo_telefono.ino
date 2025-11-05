@@ -4,7 +4,7 @@ const char* tramas[] = {
     "L,L",
     "M,2",
     "L,A",
-    "L, ",
+    "L,Space",
     "L,W",
     "M,-2",
     "L,O",

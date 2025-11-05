@@ -31,8 +31,8 @@ private:
     
 public:
     RotorDeMapeo() : cabeza(nullptr) {
-        const char alfabeto[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
-        int tam = 27;
+        const char alfabeto[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        int tam = 26;
         
         Nodo* ultimo = nullptr;
         
@@ -74,15 +74,16 @@ public:
 
     char getMapeo(char entrada) {
         if (!cabeza) return entrada;
-        // Calcular la posición en el alfabeto original
+        if (entrada == ' ') {
+            return ' ';
+        }
         int posicion;
         if (entrada >= 'A' && entrada <= 'Z') {
             posicion = entrada - 'A';
-        } else if (entrada == ' ') {
-            posicion = 26;
         } else {
             return entrada;
         }
+        
         Nodo* resultado = cabeza;
         for (int i = 0; i < posicion; i++) {
             resultado = resultado->siguiente;
