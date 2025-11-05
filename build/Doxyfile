@@ -1,0 +1,62 @@
+# --- Parámetros de Configuración Básicos (Reemplazados por CMake) ---
+
+PROJECT_NAME           = "ProyectoArduino"
+PROJECT_NUMBER         = "1.0.0"
+OUTPUT_DIRECTORY       = /home/carlos/github/said/ds-unidad-2-actividad-2-listasdobleenlazadas-Carlos-Guerrero-Salazar-a-7/build/doc
+
+# La clave: Asegúrate de que Doxygen escanee TODOS los directorios con código.
+# IMPORTANTE: Agrega aquí la carpeta con el código de Arduino
+INPUT                  = /home/carlos/github/said/ds-unidad-2-actividad-2-listasdobleenlazadas-Carlos-Guerrero-Salazar-a-7/include \
+                         /home/carlos/github/said/ds-unidad-2-actividad-2-listasdobleenlazadas-Carlos-Guerrero-Salazar-a-7/src \
+                         /home/carlos/github/said/ds-unidad-2-actividad-2-listasdobleenlazadas-Carlos-Guerrero-Salazar-a-7/main.cpp \
+                         /home/carlos/github/said/ds-unidad-2-actividad-2-listasdobleenlazadas-Carlos-Guerrero-Salazar-a-7/arduino \
+                         /home/carlos/github/said/ds-unidad-2-actividad-2-listasdobleenlazadas-Carlos-Guerrero-Salazar-a-7/README.md
+
+RECURSIVE              = YES
+FILE_PATTERNS          = *.c *.cpp *.h *.hpp *.ino
+
+# --- Soluciones Clave para Forzar la Extracción de Código ---
+
+# 1. FORZAR la documentación de todas las entidades
+EXTRACT_ALL            = YES
+
+# 2. Extraer miembros privados y estáticos
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+# 3. Habilitar el preprocesador C++
+ENABLE_PREPROCESSING   = YES
+
+# 4. Incluir archivos sin documentación
+HIDE_UNDOC_MEMBERS     = NO
+HIDE_UNDOC_CLASSES     = NO
+
+# 5. Generar gráficos de llamadas y jerarquías
+HAVE_DOT               = NO
+CALL_GRAPH             = NO
+CALLER_GRAPH           = NO
+
+# 6. Formato de salida
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+
+# 7. Mostrar warnings para debugging
+QUIET                  = NO
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = NO
+WARN_IF_DOC_ERROR      = YES
+
+# 8. Configuración de parseo
+JAVADOC_AUTOBRIEF      = YES
+OPTIMIZE_OUTPUT_FOR_C  = NO
+
+# 9. Muestra el codigo
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+STRIP_CODE_COMMENTS    = NO
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+# 10. Permitir la modificación de la introducción(usar el readme como portada)
+MARKDOWN_SUPPORT       = YES
+USE_MDFILE_AS_MAINPAGE = README.md

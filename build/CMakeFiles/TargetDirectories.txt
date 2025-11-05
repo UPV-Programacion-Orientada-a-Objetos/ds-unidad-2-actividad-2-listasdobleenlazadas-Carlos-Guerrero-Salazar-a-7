@@ -1,0 +1,4 @@
+/home/carlos/github/said/ds-unidad-2-actividad-2-listasdobleenlazadas-Carlos-Guerrero-Salazar-a-7/build/CMakeFiles/proyectomain.dir
+/home/carlos/github/said/ds-unidad-2-actividad-2-listasdobleenlazadas-Carlos-Guerrero-Salazar-a-7/build/CMakeFiles/doc.dir
+/home/carlos/github/said/ds-unidad-2-actividad-2-listasdobleenlazadas-Carlos-Guerrero-Salazar-a-7/build/CMakeFiles/edit_cache.dir
+/home/carlos/github/said/ds-unidad-2-actividad-2-listasdobleenlazadas-Carlos-Guerrero-Salazar-a-7/build/CMakeFiles/rebuild_cache.dir

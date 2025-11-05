@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/proyectomain.dir/src/ArduinoSerial.cpp.o CMakeFiles/proyectomain.dir/src/main.cpp.o -o bin/proyectomain 
