@@ -31,9 +31,8 @@ private:
     
 public:
     RotorDeMapeo() : cabeza(nullptr) {
-        // Crear el alfabeto: A-Z y espacio
         const char alfabeto[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
-        int tam = 27; // 26 letras + 1 espacio
+        int tam = 27;
         
         Nodo* ultimo = nullptr;
         

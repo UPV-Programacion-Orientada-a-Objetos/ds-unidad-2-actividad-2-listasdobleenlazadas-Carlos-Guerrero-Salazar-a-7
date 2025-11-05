@@ -60,14 +60,10 @@ int main() {
     
     std::cout << "Conexión establecida. Esperando tramas...\n\n";
     arduino->iniciarArduinoSerial();
-    
-    // 2. Inicializar estructuras de datos
     ListaDeCarga* listaCarga = new ListaDeCarga();
     RotorDeMapeo* rotor = new RotorDeMapeo();
-    
-    // 3. Bucle principal de procesamiento
     int tramasProcesadas = 0;
-    const int MAX_TRAMAS = 100; // Límite de seguridad
+    const int MAX_TRAMAS = 100;
     
     while (tramasProcesadas < MAX_TRAMAS) {
         // Leer línea del serial
